@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "shared-webview": ["../src/index"],
+      "shared-webview/*": ["../src/*"]
+    }
+  }
+}

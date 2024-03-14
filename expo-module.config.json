@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "tvos", "android", "web"],
+  "ios": {
+    "modules": ["SharedWebviewModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.sharedwebview.SharedWebviewModule"]
+  }
+}
