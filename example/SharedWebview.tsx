@@ -18,7 +18,6 @@ export default ({ pathname = "/" }: { pathname: string }) => {
         const { url } = event.nativeEvent;
         if (url.startsWith(ORIGIN) === false) return navigate(url);
         const urlObject = new URL(url);
-        console.log(urlObject.pathname);
         navigate(urlObject.pathname);
       }}
     />
