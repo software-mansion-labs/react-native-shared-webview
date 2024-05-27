@@ -1,11 +1,45 @@
-# shared-webview
+# react-native-shared-webview
 
-My new module
+A webview that detects mounting/unmounting and focus changes and keeps a single instance mounted.
+Only works on iOS for now.
 
-# API documentation
 
-- [Documentation for the main branch](https://github.com/expo/expo/blob/main/docs/pages/versions/unversioned/sdk/shared-webview.md)
-- [Documentation for the latest stable release](https://docs.expo.dev/versions/latest/sdk/shared-webview/)
+https://github.com/software-mansion-labs/react-native-shared-webview/assets/5597580/bc5cc843-da43-4a6e-adae-91a987da2681
+
+
+
+
+# Example
+
+Check out the example app for expo-router integration.
+
+```example/SharedWebview.tsx
+import { useRouter } from "expo-router";
+import { SharedWebviewView } from "shared-webview";
+import { useIsFocused } from "@react-navigation/native";
+
+const ORIGIN = "https://swmansion.com";
+
+export default ({ pathname = "/" }: { pathname: string }) => {
+  const { navigate } = useRouter();
+  const isFocused = useIsFocused();
+  return (
+    <SharedWebviewView
+      style={{ flex: 1 }}
+      options={{
+        url: (ORIGIN + "/" + pathname).replaceAll("//", "/"),
+        focused: isFocused,
+      }}
+      onNavigation={(event: any) => {
+        const { url } = event.nativeEvent;
+        if (url.startsWith(ORIGIN) === false) return navigate(url);
+        const urlObject = new URL(url);
+        navigate(urlObject.pathname);
+      }}
+    />
+  );
+};
+```
 
 # Installation in managed Expo projects
 
@@ -18,7 +52,7 @@ For bare React Native projects, you must ensure that you have [installed and con
 ### Add the package to your npm dependencies
 
 ```
-npm install shared-webview
+npm install react-native-shared-webview
 ```
 
 ### Configure for iOS
@@ -28,7 +62,7 @@ Run `npx pod-install` after installing the npm package.
 
 ### Configure for Android
 
-
+**Android is not supported yet.**
 
 # Contributing
 
