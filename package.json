@@ -1,5 +1,5 @@
 {
-  "name": "shared-webview",
+  "name": "react-native-shared-webview",
   "version": "0.1.0",
   "description": "My new module",
   "main": "build/index.js",
@@ -21,13 +21,13 @@
     "shared-webview",
     "SharedWebview"
   ],
-  "repository": "https://github.com/aleqsio/shared-webview",
+  "repository": "https://github.com/software-mansion-labs/react-native-shared-webview",
   "bugs": {
-    "url": "https://github.com/aleqsio/shared-webview/issues"
+    "url": "https://github.com/software-mansion-labs/react-native-shared-webview/issues"
   },
   "author": "aleqsio <mikucki@gmail.com> (https://github.com/aleqsio)",
   "license": "MIT",
-  "homepage": "https://github.com/aleqsio/shared-webview#readme",
+  "homepage": "https://github.com/software-mansion-labs/react-native-shared-webview#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.3.3",
