@@ -1,13 +1,9 @@
-# react-native-shared-webview
+# shared-webview
 
 A webview that detects mounting/unmounting and focus changes and keeps a single instance mounted.
 Only works on iOS for now.
 
-
 https://github.com/software-mansion-labs/react-native-shared-webview/assets/5597580/bc5cc843-da43-4a6e-adae-91a987da2681
-
-
-
 
 # Example
 
@@ -52,13 +48,12 @@ For bare React Native projects, you must ensure that you have [installed and con
 ### Add the package to your npm dependencies
 
 ```
-npm install react-native-shared-webview
+npm install shared-webview
 ```
 
 ### Configure for iOS
 
 Run `npx pod-install` after installing the npm package.
-
 
 ### Configure for Android
 
@@ -66,4 +61,4 @@ Run `npx pod-install` after installing the npm package.
 
 # Contributing
 
-Contributions are very welcome! Please refer to guidelines described in the [contributing guide]( https://github.com/expo/expo#contributing).
+Contributions are very welcome! Please refer to guidelines described in the [contributing guide](https://github.com/expo/expo#contributing).
